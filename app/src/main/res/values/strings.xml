@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">myGridView</string>
+    <string name="grit">Парус - это свобода</string>
+    <string name="menu_profileName_">Профиль</string>
+    <string name="Profile">Профиль</string>
+    <string name="news">Новости</string>
+    <string name="info">Информация</string>
+    <string name="feedback">Отзывы</string>
+    <string name="tikets">Путёвка</string>
+    <string name="galerty">Галерея</string>
+    <string name="organize">Организациям</string>
+    <string name="personnel">Персонал</string>
+    <string name="link">Обратная связь</string>
+    <string name="function">Функции</string>
+    <string name="contacts">Контакты</string>
+    <string name="developers">Разработччики</string>
+
+</resources>
