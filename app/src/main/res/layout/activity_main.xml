@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#fff">
 
     <GridView
         android:id="@+id/gridView"
         android:numColumns="3"
-        android:rowCount="5"
-        android:alignmentMode="alignMargins"
+        android:rowCount="4"
         android:columnOrderPreserved="false"
-        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="14dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="50dp"
+
 
         >
 

@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         "Организациям",
         "Сотрудники",
         "Обратная связь",
+        "Функции",
         "Контакты",
         "Разработчики"
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
 
     var img = intArrayOf(
-        R.drawable.ic_profile,
+        R.drawable.ic_profile_c,
         R.drawable.ic_news,
         R.drawable.ic_info,
         R.drawable.ic_otzv,
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         R.drawable.ic_organize,
         R.drawable.ic_personal,
         R.drawable.ic_link,
+        R.drawable.ic_ability,
         R.drawable.ic_contacts,
         R.drawable.ic_dev
     )
