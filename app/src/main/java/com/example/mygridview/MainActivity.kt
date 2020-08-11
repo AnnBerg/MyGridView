@@ -1,18 +1,15 @@
 package com.example.mygridview
 
-import android.content.Context
-import android.graphics.ColorSpace
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import android.util.Log
+import android.widget.AdapterView.OnItemClickListener
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mygridview.model.MenuModel
 import kotlinx.android.synthetic.main.activity_main.*
 
+
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class MainActivity : AppCompatActivity() {
 
     //созднание списка картинок и названий
@@ -57,59 +54,37 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         for (i in names.indices){
             modelList.add(MenuModel(names[i],img[i]))
         }
-        var customAdapter = CustomAdapter(modelList, this)
+        val customAdapter = CustomAdapter(modelList, this)
 
         gridView.adapter = customAdapter
 
+        gridView.onItemClickListener =
+            OnItemClickListener { parent, v, position, id ->
+                // ClickLog
+                Log.e("name",modelList[position].name)
+
+              val intentProfile = Intent(this,ProfileActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                when (modelList[position].name) {
+                  "Профиль"  ->  startActivity(intentProfile)
+
+                  }
+                      
+
+
+            }
 
 
 
     }
 
 
-    @Suppress("NAME_SHADOWING")
-    class CustomAdapter(
-        var itemModal : ArrayList<MenuModel>,
-        context : Context
-    ): BaseAdapter(){
 
-        // не поняла эту строчку
-        var layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-
-        //создание отдельных элиментов списка
-        override fun getView(position: Int, view: View?, viewGroup: ViewGroup?): View {
-            var view = view
-            if (view == null)
-                view = layoutInflater.inflate(R.layout.row_items,viewGroup, false)
-
-            val tvImageName = view?.findViewById<TextView>(R.id.image_name)
-            val imageView = view?.findViewById<ImageView>(R.id.image)
-
-           tvImageName?.text = itemModal[position].name
-            imageView?.setImageResource(itemModal[position].img!!)
-
-
-            return view!!
-
-
-
-        }
-
-        override fun getItem(position: Int): Any {
-            return itemModal[position]
-        }
-
-        override fun getItemId(position: Int): Long {
-          return position.toLong()
-        }
-
-        // Количество выводимых объектов
-        override fun getCount(): Int {
-            return itemModal.size
-        }
-
-    }
 }
+

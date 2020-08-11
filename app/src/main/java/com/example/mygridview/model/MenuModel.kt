@@ -1,8 +1,9 @@
 package com.example.mygridview.model
 
 import android.media.Image
+import java.io.Serializable
 
-class MenuModel {
+class MenuModel : Serializable {
 
 
     var name: String? = null
