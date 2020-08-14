@@ -14,5 +14,7 @@
     <string name="function">Функции</string>
     <string name="contacts">Контакты</string>
     <string name="developers">Разработччики</string>
+    <string name="title_activity_news">NewsActivity</string>
+
 
 </resources>

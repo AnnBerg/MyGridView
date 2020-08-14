@@ -9,8 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ImfoActivity"></activity>
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".AbilityActivity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".GalleryActivity" />
+        <activity android:name=".TicketsActivity" />
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".OrganizeActivity" />
+        <activity android:name=".PersonalActivity" />
+        <activity android:name=".LinkActivity" />
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".DevActivity" />
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ImfoActivity" />
         <activity android:name=".ViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class MainActivity : AppCompatActivity() {
 
-    //созднание списка картинок и названий
+    //созднание списка иконок и названий
 
     var modelList = ArrayList<MenuModel>()
 
@@ -71,8 +71,54 @@ class MainActivity : AppCompatActivity() {
               val intentProfile = Intent(this,ProfileActivity::class.java)
                 intent.putExtra("data",modelList[position])
 
+                val intentInfo = Intent(this,InfoActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentNews = Intent(this,NewsActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentFeedback = Intent(this,FeedbackActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentTickets = Intent(this,TicketsActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentGallery = Intent(this,GalleryActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentOrganize = Intent(this,OrganizeActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentPersonal = Intent(this,PersonalActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentLink = Intent(this,LinkActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentAbility  = Intent(this,AbilityActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentContacts = Intent(this,ContactsActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+                val intentDev = Intent(this,DevActivity::class.java)
+                intent.putExtra("data",modelList[position])
+
+
+
                 when (modelList[position].name) {
-                  "Профиль"  ->  startActivity(intentProfile)
+                    "Профиль"  ->  startActivity(intentProfile)
+                    "Новости" ->  startActivity(intentNews)
+                    "Информация" ->  startActivity(intentInfo)
+                    "Отзывы" ->  startActivity(intentFeedback)
+                    "Путёвка" ->  startActivity(intentTickets)
+                    "Галерея" ->  startActivity(intentGallery)
+                    "Организациям" ->  startActivity(intentOrganize)
+                    "Сотрудники" ->  startActivity(intentPersonal)
+                    "Обратная связь" ->  startActivity(intentLink)
+                    "Функции" ->  startActivity(intentAbility)
+                    "Контакты" ->  startActivity(intentContacts)
+                    "Разработчики" ->  startActivity(intentDev)
 
                   }
                       

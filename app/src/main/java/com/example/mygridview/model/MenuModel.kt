@@ -6,7 +6,7 @@ import java.io.Serializable
 class MenuModel : Serializable {
 
 
-    var name: String? = null
+    var name: String? = nullчвс         ссссс
     var img : Int? = null
 
 
